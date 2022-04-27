@@ -27,18 +27,17 @@ function main() {
   let t = parseInt(readLine()); // T Test Cases
   let i = 0;
   for (; i < t; i++) {
-    let n = readLine().split(' ');    //inputs with space separated
-    let T1 = n[0], T2 = n[1], R1 = n[2], R2 = n[3]   //Time periods T1, T2 and Semimajor Axes R1, R2
-    
-    //Determining constant of proportionality of planets
-    let right = Math.pow(T1, 2)/Math.pow(R1, 3)   
-    let left = Math.pow(T2, 2)/Math.pow(R2, 3)
+    let N = parseInt(readLine());
 
-    if (right === left) {
-      console.log('Yes')
-    }
-    else {
-      console.log('No')
+    const positiveInt = 1
+
+    for(let i=1; i<=N; i++) {
+        var str = ""
+        for(let j=1; j<=N; j++) {
+            str += positiveInt +" ";
+            
+        }
+        console.log(str)
     }
   }
 }
