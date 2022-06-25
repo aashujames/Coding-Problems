@@ -12,7 +12,6 @@ class LinkedList {
     //iterate Linked list
 
     iterate() {
-        //first check if head is null
         if (this.head !== null) {
             let current = this.head;
             while (current !== null) {
@@ -22,25 +21,29 @@ class LinkedList {
         }
     }
 
-    //insert a node
-    insert(data) {
-        //insert at end
-        if (this.head !== null) {
-            let current = this.head;
-            while (current.next !== null) {
-                current = current.next;
-            }
-            let newone = new ListNode(data);
-            current.next = newone;
-            console.log(current);
-        }
-    }
+    //insert at end
+    // insert(data) {
+    //     if (this.head !== null) {
+    //         let current = this.head;
+    //         while (current.next !== null) {
+    //             current = current.next;
+    //         }
+    //         let newnode = new ListNode(data);
+    //         current.next = newnode;
+    //         console.log(current);
+    //     }
+    // }
 
     //insert at beginning
-    //find node with index or data
-    //find middle node
-    //delete a node
-    //reverse the linked list in place
+    insert(data) {
+        if (this.head !== null) {
+            let newnode = new ListNode(data);
+            let a = this.head;
+            newnode.next = a;
+            this.head = newnode;
+            console.log(this.head);
+        }
+    }
 }
 
 let node1 = new ListNode(2);
