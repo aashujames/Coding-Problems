@@ -9,27 +9,44 @@ class LinkedList {
         this.head = node;
     }
 
+    // Using Tortoise and the Hare (Floyd’s Algorithm)
     //find middle node. In case of even number of nodes print second middle node.
 
     searchmiddle() {
         if (this.head !== null) {
-            let current = this.head;
-            let count = 0;
-            while (current !== null) {
-                count += 1;
-                current = current.next;
+            let pos1 = this.head;
+            let pos2 = pos1;
+            while (pos1 !== null && pos1.next !== null) {
+                pos1 = pos1.next.next;
+                pos2 = pos2.next;
             }
-            current = this.head;
-            count = Math.floor(count / 2) + 1;
 
-            while (count !== 1) {
-                current = current.next;
-                count -= 1;
-            }
-            return current.data;
+            return pos2.data;
         }
     }
 }
+
+//find middle node. In case of even number of nodes print second middle node.
+
+//     searchmiddle() {
+//         if (this.head !== null) {
+//             let current = this.head;
+//             let count = 0;
+//             while (current !== null) {
+//                 count += 1;
+//                 current = current.next;
+//             }
+//             current = this.head;
+//             count = Math.floor(count / 2) + 1;
+
+//             while (count !== 1) {
+//                 current = current.next;
+//                 count -= 1;
+//             }
+//             return current.data;
+//         }
+//     }
+// }
 
 let node1 = new ListNode(2);
 let node2 = new ListNode(5);
