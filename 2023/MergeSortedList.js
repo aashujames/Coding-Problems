@@ -3,6 +3,7 @@
 //     this.val = val === undefined ? 0 : val;
 //     this.next = next === undefined ? null : next;
 // }
+// leetcode
 
 var mergeTwoLists = function (list1, list2) {
     let tempNode = new ListNode(0, null);

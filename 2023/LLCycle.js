@@ -13,3 +13,5 @@ var hasCycle = function (head) {
 };
 
 console.log(hasCycle([3, 4, 1, 8], 0));
+
+// leetcode
